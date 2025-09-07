@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <bean id="chip" class="com.spring.annotations.Chip">
+        <property name="chipId" value="101"/>
+        <property name="modelNo" value="model102"/>
+        <qualifier value="my-chip"></qualifier>
+    </bean>
+
+
+    <bean id="chip1" class="com.spring.annotations.Chip">
+            <property name="chipId" value="102"/>
+            <property name="modelNo" value="model103"/>
+        </bean>
+    <!--<bean id="sensor" class="com.spring.annotations.Sensor">
+       <property name="sensorId" value="s1"/>
+        <property name="sensorType" value="silicon"/>
+    </bean>-->
+
+    <bean id="robo" class="com.spring.annotations.Robo"/>
+
+    <context:annotation-config />
+
+</beans>
